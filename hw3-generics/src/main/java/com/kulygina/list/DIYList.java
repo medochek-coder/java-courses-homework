@@ -7,11 +7,11 @@ public class DIYList<E> extends AbstractList<E> implements List<E>, RandomAccess
 
     private Object[] elementData;
     private int size;
-    private final int constStartSize = 10;
+    private final int DEFAULT_SIZE = 10;
 
     public DIYList() {
         size = 0;
-        elementData = new Object[constStartSize];
+        elementData = new Object[DEFAULT_SIZE];
     }
 
     @Override
@@ -69,5 +69,4 @@ public class DIYList<E> extends AbstractList<E> implements List<E>, RandomAccess
     private String outOfBoundsMsg(int index) {
         return "Index: " + index + ", Size: " + size();
     }
-
 }
