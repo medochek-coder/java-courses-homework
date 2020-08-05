@@ -6,29 +6,26 @@ import java.util.*;
 public class DIYList<E> extends AbstractList<E> implements List<E>, RandomAccess {
 
     private Object[] elementData;
-
     private int size;
+    private final int constStartSize = 10;
 
     public DIYList() {
         size = 0;
-        elementData = new Object[10];
+        elementData = new Object[constStartSize];
     }
 
     @Override
     public void add(int index, E element) {
         rangeCheckForAdd(index);
         expandIfNeed(size + 1);
-
         System.arraycopy(elementData, index, elementData, index + 1,
                 size - index);
         elementData[index] = element;
         size++;
     }
 
-    //do it
     @Override
     public boolean addAll(int index, Collection<? extends E> c) {
-
         return super.addAll(index, c);
     }
 
@@ -50,9 +47,9 @@ public class DIYList<E> extends AbstractList<E> implements List<E>, RandomAccess
         return size;
     }
 
-    private void expandIfNeed(int neededCount){
+    private void expandIfNeed(int neededCount) {
         if (elementData.length < neededCount) {
-            Object[] newArray = new Object[(int) (elementData.length*1.5)];
+            Object[] newArray = new Object[(int) (elementData.length * 1.5)];
             System.arraycopy(elementData, 0, newArray, 0,
                     elementData.length);
             elementData = newArray;
@@ -70,7 +67,7 @@ public class DIYList<E> extends AbstractList<E> implements List<E>, RandomAccess
     }
 
     private String outOfBoundsMsg(int index) {
-        return "Index: "+index+", Size: "+size();
+        return "Index: " + index + ", Size: " + size();
     }
 
 }
