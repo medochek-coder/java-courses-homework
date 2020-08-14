@@ -11,6 +11,7 @@
     <modules>
         <module>hw01-maven</module>
         <module>hw3-generics</module>
+        <module>hw04-annotations</module>
     </modules>
 
     <properties>
