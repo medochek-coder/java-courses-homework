@@ -19,20 +19,20 @@ public class TestExecuter {
         Class<?> myClass = Class.forName(className);
         Method[] methods = myClass.getDeclaredMethods();
         for (Method method : methods) {
-            if(method.getDeclaredAnnotations().length == 0) continue;
-            if(method.getDeclaredAnnotations()[0].annotationType().equals(BeforeAll.class)) {
+            if (method.getDeclaredAnnotations().length == 0) continue;
+            if (method.getDeclaredAnnotations()[0].annotationType().equals(BeforeAll.class)) {
                 beforeAllMethods.add(method);
             }
-            if(method.getDeclaredAnnotations()[0].annotationType().equals(Before.class)) {
+            if (method.getDeclaredAnnotations()[0].annotationType().equals(Before.class)) {
                 beforeMethods.add(method);
             }
-            if(method.getDeclaredAnnotations()[0].annotationType().equals(Test.class)) {
+            if (method.getDeclaredAnnotations()[0].annotationType().equals(Test.class)) {
                 testMethods.add(method);
             }
-            if(method.getDeclaredAnnotations()[0].annotationType().equals(After.class)) {
+            if (method.getDeclaredAnnotations()[0].annotationType().equals(After.class)) {
                 afterMethods.add(method);
             }
-            if(method.getDeclaredAnnotations()[0].annotationType().equals(AfterAll.class)) {
+            if (method.getDeclaredAnnotations()[0].annotationType().equals(AfterAll.class)) {
                 afterAllMethods.add(method);
             }
         }
