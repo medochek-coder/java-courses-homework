@@ -12,6 +12,7 @@
         <module>hw01-maven</module>
         <module>hw3-generics</module>
         <module>hw04-annotations</module>
+        <module>hw05-proxy</module>
     </modules>
 
     <properties>
