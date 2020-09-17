@@ -13,6 +13,7 @@
         <module>hw3-generics</module>
         <module>hw04-annotations</module>
         <module>hw05-proxy</module>
+        <module>hw07-ATM</module>
     </modules>
 
     <properties>
