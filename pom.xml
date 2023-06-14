@@ -17,7 +17,7 @@
     </modules>
 
     <properties>
-        <com.google.guava.versoin>29.0-jre</com.google.guava.versoin>
+        <com.google.guava.versoin>32.0.0-jre</com.google.guava.versoin>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
